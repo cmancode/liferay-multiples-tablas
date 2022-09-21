@@ -51,7 +51,7 @@ public class ClienteLocalServiceImpl extends ClienteLocalServiceBaseImpl {
 			cliente.setCell(cell);
 			super.addCliente(cliente);
 			log.info("Cliente pasó por ahí...");
-			
+			log.info("Pruebas Git...");
 			respuesta.put("success", "Se ha registrado el cliente de manera exitosa.");
 			respuesta.put("status", 200);
 			
