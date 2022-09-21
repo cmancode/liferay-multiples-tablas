@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.liferay.training.service.app.model.Cliente" />
+	<import class="com.liferay.training.service.app.model.Factura" />
+	<import class="com.liferay.training.service.app.model.ItemFactura" />
+	<import class="com.liferay.training.service.app.model.Producto" />
+	<class name="com.liferay.training.service.app.model.impl.ClienteImpl" table="FacturaService_Cliente">
+		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="clienteId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="cell" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.training.service.app.model.impl.FacturaImpl" table="FacturaService_Factura">
+		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="facturaId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="total" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="clienteId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.training.service.app.model.impl.ItemFacturaImpl" table="FacturaService_ItemFactura">
+		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="itemFacturaId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="cantidadProd" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="facturaId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="productoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.training.service.app.model.impl.ProductoImpl" table="FacturaService_Producto">
+		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="productoId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="precio" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+</hibernate-mapping>

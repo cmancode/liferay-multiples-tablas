@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:FacturaService:FacturaService-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../FacturaService-api/src/main/java"
+}
+
+group = "com.liferay.training.service.app"

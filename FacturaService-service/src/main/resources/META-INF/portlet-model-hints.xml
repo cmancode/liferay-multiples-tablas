@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.training.service.app.model.Cliente">
+		<field name="clienteId" type="long" />
+		<field name="name" type="String" />
+		<field name="cell" type="String" />
+	</model>
+	<model name="com.liferay.training.service.app.model.Factura">
+		<field name="facturaId" type="long" />
+		<field name="total" type="String" />
+		<field name="clienteId" type="long" />
+	</model>
+	<model name="com.liferay.training.service.app.model.ItemFactura">
+		<field name="itemFacturaId" type="long" />
+		<field name="cantidadProd" type="long" />
+		<field name="facturaId" type="long" />
+		<field name="productoId" type="long" />
+	</model>
+	<model name="com.liferay.training.service.app.model.Producto">
+		<field name="productoId" type="long" />
+		<field name="name" type="String" />
+		<field name="precio" type="Double" />
+	</model>
+</model-hints>
