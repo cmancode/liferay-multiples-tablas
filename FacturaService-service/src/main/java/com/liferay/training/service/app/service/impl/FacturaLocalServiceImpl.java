@@ -78,7 +78,11 @@ public class FacturaLocalServiceImpl extends FacturaLocalServiceBaseImpl {
 								linea.getIdProducto(), linea.getCantidad());
 					}
 				});
+<<<<<<< HEAD
 				System.out.println("Probando....");
+=======
+				System.out.println("Datos guardados con éxito...");
+>>>>>>> main
 				respuesta.put("success", "La factura se ha generado de manera exitosa.");
 				respuesta.put("status", 200);
 			}
